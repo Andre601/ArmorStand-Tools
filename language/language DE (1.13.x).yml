@@ -7,7 +7,7 @@
 # Deutsche Übersetzung von Andre_601 (Andre424971)
 # Andre601.com
 #
-# Datei generiert von: v3.0.0
+# Datei generiert von: v3.5.0
 # (Wenn das nicht die Version ist, die du nutzt, solltest du diese Datei
 #  löschen, damit eine neue generiert werden kann. Es gibt möglicherweise neue Optionen)
 #
@@ -84,6 +84,19 @@ removeCmd: 'Entferne hinzugefügten Befehl'
 assignConsole: 'Füge einen Befehl hinzu, welcher als Konsole ausgeführt wird'
 assignPlayer: 'Füge einen Befehl hinzu, welcher als Spieler ausgeführt wird'
 executeCmdError: 'Ein Fehler ist beim ausführen des Befehls von diesem Rüstungssständer aufgetreten'
+# Neu seit v3.2.0
+creativeRequired: 'Der Kreativ-Modus ist benötigt um einen Rüstungsständer als Befehlsblock zu speichern'
+# Neu seit v3.3.0
+cmdOnCooldown: 'Dieser Befehl ist im cooldown'
+cooldownRemovedFrom: 'Cooldown entfernt von'
+isAnInvalidCooldown: 'ist eine ungültige cooldown zeit'
+cooldownSetTo: 'Cooldown gesetzt zu'
+ticksFor: 'ticks für'
+setCooldown: 'Setze den cooldown für den Befehl'
+removeCooldown: 'Entferne den cooldown für den Befehl'
+# Neu seit v3.4.1
+glow: 'Leuchten'
+cmdNotAllowed: 'Dieser Befehl ist nicht erlaubt, während du Armor Stand Tools verwendest'
 #
 #############################
 # Tool-Namen & Beschreibung #
@@ -291,4 +304,7 @@ tool:
     lore:
   gui_invul:
     name: 'Ändere Unzerstörbarkeit'
+    lore:
+  gui_glow:
+    name: 'Ändere Leuchten'
     lore:
