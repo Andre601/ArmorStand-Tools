@@ -7,14 +7,13 @@
 #
 # Hauptconfig
 #
-# Datei erstellt von: v3.7.2
-# (Wenn das nicht die Version ist, die du nutzt, solltest du diese Datei löschen, damit eine neue
-#  generiert werden kann. Es gibt möglicherweise neue Optionen)
+# Diese Datei unterstützt ArmorStandTools ab Version 3.5.0
+# Unterstützte Minecraft Versionen sind 1.13.x bis 1.16.x
 #
-# Features:
+# Funktionen:
 #   - Rüstungsständer erschaffen
 #   - Rüstungsständer benennen
-#   - Ändere: Gravitation, Sichtbarkeit, Arme, Platte, Grösse, Unzerstörbarkeit, Ausrüstung sichern
+#   - Ändere: Gravitation, Sichtbarkeit, Arme, Platte, Grösse, Unzerstörbarkeit, Ausrüstungssicherung
 #   - Manipuliere die Position von Kopf, Körper, Arme und Beine
 #   - Volle Kontrolle über die Ausrüstung des Rüstungsständers (Rüstung und Items in den Händen.)
 #   - Rüstungsständer klonen-Tool
@@ -34,6 +33,7 @@
 #   /ascmd view                     Zeige den Befehl vom nahsten Rüstungsständer
 #   /ascmd cooldown <ticks>         Setze den cooldown für den Befehl vom nahsten Rüstungsständer. (Dies überschreibt den standart cooldown in der config.yml)
 #   /ascmd cooldown remove          Entfernt den cooldown für den Befehl vom nahsten Rüstungsständer. (Der normale cooldown in der config.yml wird verwendet)
+#
 #   Hinweis: Befehle können %player% enthalten, welches bei ausführung mit dem Spielername ausgetauscht wird.
 #
 # Permissions:
@@ -56,12 +56,8 @@
 #   - Zusätzlich gibt es noch eine eigene flag namens 'ast' welche standartmässig auf Erlauben gesetzt ist, kann aber zu verweigern
 #     gesetzt werden, wenn du eine Region haben möchtest, in welcher Spieler bauen können, aber nicht AST verwenden sollen.
 #   - Die ast WorldGuard flag wird ignoriert, wenn der Spieler die astools.bypass-wg-flag Berechtigung hat. Dies bedeutet, dass ein
-#     Spieler mit dieser Berechtigung AST in WorldGuard Regionen verwenden kann, selbst wenn diese die ast flaf auf verweigern haben.
+#     Spieler mit dieser Berechtigung AST in WorldGuard Regionen verwenden kann, selbst wenn diese die ast flag auf verweigern haben.
 #   - Die ast WorldGuard flag wird auch ignoriert, wenn der Spieler OP hat.
-#
-# Dies sind die Standarts zum Erstellen eines neuen Rüstungsständers mit dem /astools (oder /ast) Rüstungsständers
-# Der Helm, Brustplatte, Hosen, Schuhe und inHand-Items sind so gesetzt: MATERIAL Datenwert
-# Bsp: Um standartmässig rote Wolle in der Hand vom Rüstungsständer zu haben: inHand: WOOL 14
 #
 integrateWithWorldGuard: true
 allowMovingStandsBetweenWorlds: false
@@ -73,6 +69,11 @@ bypassWorldguardForASCmdExecution: false
 # Füge so viele Befehle hinzu wie du willst. Nur das erste Wort eines Befehls ist benötigt. Alles nach dem ersten leerschlag wird ignoriert.
 #deniedCommandsWhileUsingTools:
 #  - sell
+#
+# Dies sind die Standarts zum Erstellen eines neuen Rüstungsständers mit dem /astools (oder /ast) Rüstungsständer
+# Der Helm, die Brustplatte, Hosen, Schuhe und Hand-Items sind in folgendem Format: MATERIAL Datenwert
+# Bsp: Um standartmässig rote Wolle in der Hand vom Rüstungsständer zu haben, verwende inHand: WOOL 14
+#
 helmet: AIR 0
 chest: AIR 0
 pants: AIR 0
