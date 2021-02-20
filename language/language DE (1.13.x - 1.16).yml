@@ -7,7 +7,7 @@
 # Deutsche Übersetzung von Andre_601 (Andre424971)
 # Andre601.com
 #
-# Datei generiert von: v3.5.0
+# Datei generiert von: v3.7.2
 # (Wenn das nicht die Version ist, die du nutzt, solltest du diese Datei
 #  löschen, damit eine neue generiert werden kann. Es gibt möglicherweise neue Optionen)
 #
@@ -65,8 +65,6 @@ headFailed: 'Kopf hinzufügen Fehlgeschlagen. Versuchs nochmal.'
 noCommandPerm: 'Du hast keine Rechte diesen Befehl zu nutzen.'
 armorStand: 'Rüstungsständer'
 none: 'Keiner'
-enabled: 'Aktiviert'
-disabled: 'Deaktiviert'
 guiInUse: 'Dieses GUI ist in benutzung'
 # Neu seit v2.4.0:
 noASNearBy: 'Keinen Rüstungssständer in der nähe gefunden'
