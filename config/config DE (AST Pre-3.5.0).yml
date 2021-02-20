@@ -7,11 +7,10 @@
 #
 # Hauptconfig
 #
-# Datei erstellt von: v2.4.3
-# (Wenn das nicht die Version ist, die du nutzt, solltest du diese Datei löschen, damit eine neue
-#  generiert werden kann. Es gibt möglicherweise neue Optionen)
+# Diese Datei unterstützt ArmorStandTools vor Version 3.5.0
+# Unterstützte Minecraft Versionen sind 1.8.x bis 1.12.x
 #
-# Features:
+# Funktionen:
 #   - Rüstungsständer erschaffen
 #   - Rüstungsständer benennen
 #   - Ändere: Gravitation, Sichtbarkeit, Arme, Platte, Grösse, Unzerstörbarkeit, Ausrüstung sichern
@@ -47,13 +46,14 @@
 #   astools.ascmd.view              Permission zum sehen einens Befehls von einem Rüstungsständer
 #   astools.ascmd.execute           Permission zum ausführen eines Befehls (Bei rechtsklick)
 #
-# Dies sind die Standarts zum Erstellen eines neuen Rüstungsständers mit dem /astools (oder /ast) Rüstungsständers
-# Der Helm, Brustplatte, Hosen, Schuhe und inHand-Items sind so gesetzt: MATERIAL Datenwert
-# Bsp: Um standartmässig rote Wolle in der Hand vom Rüstungsständer zu haben: inHand: WOOL 14
-#
 integrateWithWorldGuard: true
 allowMovingStandsBetweenWorlds: false
 deactivateToolsOnWorldChange: true
+#
+# Dies sind die Standarts zum Erstellen eines neuen Rüstungsständers mit dem /astools (oder /ast) Rüstungsständer
+# Der Helm, die Brustplatte, Hosen, Schuhe und Hand-Items sind in folgendem Format: MATERIAL Datenwert
+# Bsp: Um standartmässig rote Wolle in der Hand vom Rüstungsständer zu haben, verwende inHand: WOOL 14
+#
 helmet: SKULL_ITEM 3
 chest: IRON_CHESTPLATE 0
 pants: IRON_LEGGINGS 0
