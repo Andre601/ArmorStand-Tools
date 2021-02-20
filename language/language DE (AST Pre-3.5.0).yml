@@ -7,12 +7,11 @@
 # Deutsche Übersetzung von Andre_601 (Andre424971)
 # Andre601.com
 #
-# Datei generiert von: v2.4.3
-# (Wenn das nicht die Version ist, die du nutzt, solltest du diese Datei
-#  löschen, damit eine neue generiert werden kann. Es gibt möglicherweise neue Optionen)
+# Diese Datei unterstützt ArmorStandTools vor Version 3.5.0
+# Unterstützte Minecraft Versionsn sind 1.8.x bis 1.12.x
 #
-# Wenn du nach einer Übersetzten version dieser Datei suchst, schau hier:
-# https://www.spigotmc.org/resources/armor-stand-tools.2237/
+# Weitere Übersetzungen kannst du auf der Spigot Seite finden:
+# https://www.spigotmc.org/resources/2237/
 #
 # Editiere diese Nachrichten, wenn du die Wörter oder
 # die Sprache in diesem Plugin ändern willst..
@@ -21,11 +20,10 @@
 # Anführungszeichen ist: 'So wie das hier'
 # Wenn du irgendwas ausserhalb der Anführungszeichen editierst,
 # können Fehler entstehen.
-# Benutze keine ' innerhalb der Nachrichten
+# Wenn du ' in Nachrichten verwenden willst, musst du '' verwenden.
 #
-# Wenn du irgenwann einmal wieder die alte Config willt,
-# musst du nur diese Datei löschen und das Plugin neu laden. Eine neue
-# Sprachdatei wird dann generiert.
+# Um die Originaldatei wieder zu erhalten, lösche diese und führe einen
+# Plugin Neustart aus.
 #
 ####################
 # Hauptnachrichten #
