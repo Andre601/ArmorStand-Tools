@@ -26,5 +26,5 @@ Du kannst dann die Dateien downloaden indem du auf den grünen "Code" Knopf klic
 Die heruntergeladene ZIP Datei wird diese Readme Datei und die verschiedenen Sprach und Configdateien enthalten.  
 Du solltest jetzt die Datei, welche du verwenden willst, auswählen. Nimm einen Blick auf die obige Tabelle um zu sehen, welche Datei für welche Version von AST verwendet werden sollte.
 
-Um die Dateien zu extrahieren, öffne die ZIP Datei mit 7Zip oder WinRAR. Du musst sie dann zu `config.yml` und `language.yml` umbenenen und dann in den ArmorStandTools Ordner hochladen, wodurch die alten Dateien ersetzt werden.  
+Um die Dateien zu extrahieren, öffne die ZIP Datei mit 7Zip oder WinRAR, gehe in den `language` und `config` Ordner und ziehe die Dateien, welche du willst raus. Du musst sie dann zu `config.yml` und `language.yml` umbenenen und dann in den ArmorStandTools Ordner hochladen, wodurch die alten Dateien ersetzt werden.  
 Alles was noch bleibt ist `/ast reload` auszuführen, um die änderungen anzuwenden.
