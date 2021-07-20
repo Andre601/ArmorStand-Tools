@@ -1,0 +1,110 @@
+# Armor Stand Tools
+# von St3venAU
+# St3venAU@gmail.com
+#
+# Übersetzung: Andre_601
+# https://andre601.ch
+#
+# Hauptkonfiguration
+#
+# Datei erstellt von: v${project.version}
+# (Wenn dies nicht die Version ist, welche du verwendest, solltest du eventuell diese Config löschen
+#  um sie neu zu generieren. Es könnte neue Config Optionen geben)
+#
+# Funktionen:
+#   - Manipuliere die Position von Kopf, Körper, Armen und Beinen
+#   - Ändere Schwerkraft, Sichtbarkeit, Arme, Bodenplatte, Unzerstörbarkeit, Equipment-Sicherung und Leuchteffekt
+#   - Benenne Rüstungsständer
+#   - Volle Kontrolle über das Inventar eines Rüstungsständers (Rüstung und Items in beiden Händen)
+#   - Erstelle exakte Kopien von Rüstungsständern
+#   - Erstelle einen Befehlsblock mit dem Befehl um den selben Rüstungsständer zu erschaffen
+#   - Setze den Kopf eines Rüstungsständers zu dem eines bestimmten Spielers
+#   - Support für WorldGuard Regionen
+#   - Benutzerdefinierbare Sprachkonfiguration
+#
+# Befehle:
+#   /ascmd assign console <command> Füge einen Konsolenbefehl einem naheliegenden Rüstungsständer zu (max. 4 Blöcke entfernt)
+#   /ascmd assign player <command>  Füge einen Spielerbefehl einem naheliegenden Rüstungsständer zu (max. 4 Blöcke entfernt)
+#   /ascmd remove                   Entferne den Befehl, welche dem naheliegensten Rüstungstsänder zugeordnet ist
+#   /ascmd view                     Zeige den Befehl, welcher dem naheliegensten Rüstungsständer zugeordnet ist
+#   /ascmd cooldown <ticks>         Setze den Cooldown für den Befehl vom naheliegensten Rüstungsständer (Dies überschreibt die Standardeinstellung in der config.yml)
+#   /ascmd cooldown remove          Entfernt den Cooldown vom naheliegensten Rüstungsständer (Standardeinstellung von der config.yml wird verwendet)
+#   /astools or /ast                Ehemaliger Befehl - Gibt nun eine Anleitung für den Spieler, dass dieser nun eine Rüstungsständer Schleichen + Rechtsklicken muss
+#   /astools new                    Erstelle einen neuen Rüstungsständer - Wird gespawnt und getragen vom Spieler
+#   /astools reload                 Lade das plugin neu (Verwende dies wenn du Config-änderungen vorgenommen hast)
+#
+#   Hinweis: Rüstungsständer-Befehle können einen %player% Platzhalter beinhalten, welcher durch den namen des ausführenden Spielers ersetzt wird.
+#
+# Berechtigungen:
+#   astools.use                     Berechtigung zum verwenden aller Tools, mit ausnahme derjenigen, welche ihre eigene Berechtigung haben (Siehe unten)
+#   astools.new                     Berechtigung zum verwenden des "/astools new" Befehls um einen neuen Rüstungsständer zu erschaffen
+#   astools.clone                   Berechtigung zum verwenden des Klon-Tool (Klont den Rüstungsständer ohne dass man alle Materialien braucht)
+#   astools.summon                  Berechtigung zum verwenden des Erschaffen-Tools (Erschafft einen neuen Rüstungsständer, ohne dass man alle Materialien braucht)
+#   astools.head                    Berechtigung zum verwenden des Spielerkopf-Tools (Fähigkeit, einen Spielerkopf für den Rüstungsständer zu bestimmen)
+#   astools.cmdblock                Berechtigung zum verwenden des Speichern-Tools (Erstellt einen Befehlsblock)
+#   astools.reload                  Berechtigung um das Plugin neu zu laden
+#   astools.ascmd.assign.console    Berechtigung um einen Konsolenbefehl einem Rüstungsständer hinzuzufügen
+#   astools.ascmd.assign.player     Berechtigung um einen Spielerbefehl einem Rüstungsständer hinzuzufügen
+#   astools.ascmd.remove            Berechtigung um einen Befehl von einem Rüstungsständer zu entfernen
+#   astools.ascmd.view              Berechtigung um den Befehl zu sehen, welcher einem Rüstungsständer hinzugefügt wurde
+#   astools.ascmd.execute           Berechtigung um einen Befehl auszuführen, welcher einem Rüstungsständer hinzugefügt wurde (Beim Rechtsklicken)
+#   astools.ascmd.cooldown          Berechtigung um einen Cooldown Befehlen hinzuzufügen, welche einem Rüstungsständer hinzugefügt wurden
+#   astools.bypass-wg-flag          Berechtigung um AST's eigene WorldGuard Flagge zu umgehen (Siehe unten für mehr details)
+#
+# WorldGuard Integration:
+#   - Wenn ein Spieler nicht die Bauberechtigung für die Region hat, wird diesem auch die verwenden von AST in dieser Region verweigert.
+#   - Zusätzich gibt es eine eigene Flag namens 'ast' welche standardmässig auf 'Erlauben' gesetzt ist. Dies kann zu 'Verweigern' geändert werden,
+#     wenn du willst, dass Spieler Baurechte in der Region haben sollen, jedoch keine Berechtigung um verwenden von AST haben sollen.
+#   - Die 'ast' Flag wird ignoriert, wenn der Spieler die 'astools.bypass-wg-flag' Berechtigung hat. Dies bedeutet, dass Spieler mit dieser
+#     Berechtigung AST in WorldGuard Regionen verwenden können, selbst wenn diese die 'ast' flag auf 'Verweigern' gesetzt haben.
+#   - Die 'ast' flag wird auch bei Spielern ignoriert, welche OP haben.
+#
+showDebugMessages: false
+integrateWithWorldGuard: true
+allowMovingStandsBetweenWorlds: false
+requireCreativeForSaveAsCmdBlock: false
+defaultASCmdCooldownTicks: 0
+bypassWorldguardForASCmdExecution: false
+enableTool:
+  gui_clone: true
+  gui_save: true
+  gui_invis: true
+  gui_size: true
+  gui_base: true
+  gui_grav: true
+  gui_arms: true
+  gui_name: true
+  gui_slots: true
+  gui_pHead: true
+  gui_invul: true
+  gui_move: true
+  gui_rotate: true
+  gui_moveX: true
+  gui_moveY: true
+  gui_moveZ: true
+  gui_glow: true
+  gui_head: true
+  gui_body: true
+  gui_larm: true
+  gui_rarm: true
+  gui_lleg: true
+  gui_rleg: true
+  gui_advanced: true
+  gui_lArmX: true
+  gui_lArmY: true
+  gui_lArmZ: true
+  gui_rArmX: true
+  gui_rArmY: true
+  gui_rArmZ: true
+  gui_headX: true
+  gui_headY: true
+  gui_headZ: true
+  gui_lLegX: true
+  gui_lLegY: true
+  gui_lLegZ: true
+  gui_rLegX: true
+  gui_rLegY: true
+  gui_rLegZ: true
+  gui_bodyX: true
+  gui_bodyY: true
+  gui_bodyZ: true
