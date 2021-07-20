@@ -1,10 +1,13 @@
 [plugin]: https://www.spigotmc.org/resources/2237/
 
-[config_new]: https://github.com/Andre601/ArmorStand-Tools/blob/master/config/config_DE_AST_3.5.0+.yml
-[language_new]: https://github.com/Andre601/ArmorStand-Tools/blob/master/language/language_DE_AST_3.5.0+.yml
+[config_4.0.0+]: https://github.com/Andre601/ArmorStand-Tools/blob/master/config/config_DE_AST_4.0.0+.yml
+[language_4.0.0+]: https://github.com/Andre601/ArmorStand-Tools/blob/master/language/language_DE_AST_4.0.0+.yml
 
-[config_old]: https://github.com/Andre601/ArmorStand-Tools/blob/master/config/config_DE_AST_Pre-3.5.0.yml
-[language_old]: https://github.com/Andre601/ArmorStand-Tools/blob/master/language/language_DE_AST_Pre-3.5.0.yml
+[config_3.5.0+]: https://github.com/Andre601/ArmorStand-Tools/blob/master/config/config_DE_AST_3.5.0+.yml
+[language_3.5.0+]: https://github.com/Andre601/ArmorStand-Tools/blob/master/language/language_DE_AST_3.5.0+.yml
+
+[config_pre_3.5.0]: https://github.com/Andre601/ArmorStand-Tools/blob/master/config/config_DE_AST_Pre-3.5.0.yml
+[language_pre_3.5.0]: https://github.com/Andre601/ArmorStand-Tools/blob/master/language/language_DE_AST_Pre-3.5.0.yml
 
 # ArmorStandTools Übersetzungen
 Diese Repository enthält die übersetzten Dateien für das Plugin [ArmorStandTools][plugin]. Sowohl die config.yml als auch die language.yml wurden übersetzt.
@@ -14,10 +17,11 @@ Diese Repository enthält die übersetzten Dateien für das Plugin [ArmorStandTo
 ### Richtige Version wählen
 Abhängig von der AST Version musst du eine andere Datei verwenden:
 
-| AST Version      | `config.yml`                                | `language.yml`                                  |
-| ---------------- | ------------------------------------------- | ----------------------------------------------- |
-| 3.5.0 oder neuer | [`config_DE_AST_3.5.0+.yml`][config_new]    | [`language_DE_AST_3.5.0+.yml`][language_new]    |
-| 3.4.3 oder älter | [`config_DE_AST_Pre-3.5.0.yml`][config_old] | [`language_DE_AST_Pre-3.5.0.yml`][language_old] |
+| AST Version            | `config.yml`                                      | `language.yml`                                        |
+| ---------------------- | ------------------------------------------------- | ----------------------------------------------------- |
+| 4.0.0+                 | [`config_DE_AST_4.0.0+.yml`][config_4.0.0+]       | [`language_DE_AST_4.0.0+.yml`][language_4.0.0+]       |
+| 3.5.0 bis 3.7.2        | [`config_DE_AST_3.5.0+.yml`][config_3.5.0+]       | [`language_DE_AST_3.5.0+.yml`][language_3.5.0+]       |
+| Versionen bis zu 3.4.3 | [`config_DE_AST_Pre-3.5.0.yml`][config_pre_3.5.0] | [`language_DE_AST_Pre-3.5.0.yml`][language_pre_3.5.0] |
 
 ### Datei ersetzen
 Um die bereits existierende config.yml und language.yml zu ersetzen solltest du zuerst ein Backup von diesen machen, falls etwas schief geht.  
