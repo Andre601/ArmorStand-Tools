@@ -1,0 +1,266 @@
+# Armor Stand Tools
+# von St3venAU
+# St3venAU@gmail.com
+#
+# Übersetzung: Andre_601
+# https://andre601.ch
+#
+# Sprachkonfiguration
+#
+# Datei erstellt von: v${project.version}
+# (Wenn dies nicht die Version ist, welche du verwendest, solltest du eventuell diese Config löschen
+#  um sie neu zu generieren. Es könnte neue Config Optionen geben)
+#
+# Wenn du nach einer übersetzten Version schaust, siehe hier:
+# https://www.spigotmc.org/resources/armor-stand-tools.2237/
+#
+# Bearbeite diese Texte wenn du die formulierung oder die Sprache ändern willst,
+# welche in diesem Plugin verwendet wird.
+# 
+# WICHTIG: Bearbeite nur den Text, welcher zwischen den einzelnen
+# Anführungszeichen ist: 'So wie das hier'
+# Wenn du irgendwas ausserhalb der Anführungszeichen editierst,
+# können Fehler entstehen.
+# Wenn du ' in Nachrichten verwenden willst, musst du '' verwenden.
+#
+# Um die Originaldatei wieder zu erhalten, lösche diese und führe einen
+# Plugin Neustart aus.
+#
+####################
+# Hauptnachrichten #
+####################
+asDropped: 'Rüstungsständer fallen gelasen'
+asVisible: 'Sichtbarkeit'
+isTrue: 'Wahr'
+isFalse: 'Falsch'
+carrying: 'Trage Rüstungsständer. Klicke zum fallenlassen.'
+generalNoPerm: 'Keine Berechtigung für dieses Tool und/oder Region'
+cbCreated: 'Befehlsblock erstellt'
+size: 'Grösse'
+small: 'Klein'
+normal: 'Normal'
+basePlate: 'Bodenplatte'
+isOn: 'An'
+isOff: 'Aus'
+gravity: 'Schwerkraft'
+arms: 'Arme'
+invul: 'Unzerstörbarkeit'
+equip: 'Ausrüstung'
+locked: 'Gesichert'
+unLocked: 'Ungesichert'
+currently: 'Aktuell'
+notConsole: 'Dieser Befehl kann nicht von der Konsole ausgeführt werden'
+noAirError: 'Error: Konnte keinen nahegelegenen Luftblock finden- Beweg dich und versuch es erneut.'
+invalidName: 'ist kein gültiger Minecraft name'
+wgNoPerm: 'Keine Berechtigung um den Rüstungsständer in dieser Region zu verändern'
+noCommandPerm: 'Du hast keine Berechtigung um diesen Befehl zu verwenden'
+armorStand: 'Rüstungsständer'
+none: 'Keine'
+guiInUse: 'Dieser Rüstungsständer-GUI wird bereits verwendet'
+# Neu seit v2.4.0:
+noASNearBy: 'Kein Rüstungsständer in der nähe gefunden'
+closestAS: 'Nächster Rüstungsständer'
+hasNoCmd: 'hat keinen Befehl zugewiesen'
+hasCmd: 'hat einen zugewiesenen Befehl'
+type: 'Typ'
+command: 'Befehl'
+unassignedCmd: 'Befehl von Rüstungsständer entfernt'
+assignedCmdToAS: 'Befehl an nächstem Rüstungständer zugewiesen'
+assignCmdError: 'Ein Fehler ist beim zuweisen des Befehls aufgetreten'
+ascmdHelp: 'Dieser Befehl wird verwendet, um einen Befehl dem nächstgelegenen Rüstungsständer (Innerhalb von 4 Blöcken) zu zuweisen. Der Befehl wird beim Rechtsklick auf den Rüstungsständer ausgeführt.'
+viewCmd: 'Zeige zugewiesene Befehle'
+removeCmd: 'Entferne zugewiesene Befehle'
+assignConsole: 'Weise einen Befehl zu, welcher als Konsole ausgeführt wird'
+assignPlayer: 'Weise einen Befehl zu, welcher als der Spieler ausgeführt wird'
+executeCmdError: 'Ein Fehler ist beim ausführen des dem Rüstungsständers zugewiesenen Befehl erschienen'
+# Neu seit v3.2.0
+creativeRequired: 'Kreativmodus ist benötigt, um den Rüstungsständer als Befehlsblock zu speichern'
+# New since v3.3.0
+cmdOnCooldown: 'Dieser Befehl ist im Cooldown'
+cooldownRemovedFrom: 'Cooldown entfern von'
+isAnInvalidCooldown: 'ist eine ungültige Cooldown-Zeit'
+cooldownSetTo: 'Cooldown geändert zu'
+ticksFor: 'ticks für'
+setCooldown: 'Setzt den Cooldown für den Befehl'
+removeCooldown: 'Entfernt den Cooldown für den Befehl'
+# Neu seit v3.4.1
+glow: 'Leuchten'
+#Neu seit v4.0.0
+crouch: 'Schleichen'
+click: 'Klicken'
+finish: 'Beenden'
+#Neu seit v4.0.2
+instructions1: 'Schleichen + Rechtsklicke einen Rüstungsständer zum editieren oder um Befehle zu verwenden'
+instructions2: 'zum erschaffen eines neuen Rüstungsständers'
+error: 'Ein Fehler ist aufgetreten. Versuch es erneut.'
+#Neu seit v4.1.0
+reloaded : 'Armor Stand Tools neu geladen'
+#
+###############################
+# Tool Namen & Beschreibungen #
+###############################
+tool:
+  gui_move:
+    name: 'Aufnehmen (Bewegen)'
+    lore:
+      - 'Nimm den Rüstungsständer auf und beweg ihn'
+  gui_rotate:
+    name: 'Rotieren'
+    lore:
+      - 'Linksklick: 5° rotation im Uhrzeigersinn'
+      - 'Rechtsklick: 5° rotation gegen Uhrzeigersinn'
+  gui_clone:
+    name: 'Klonen'
+    lore:
+      - 'Klone diesen Rüstungsständer und heb ihn auf'
+  gui_save:
+    name: 'Befehlsblock erstellen'
+    lore:
+      - 'Erstelle einen Befehlsblock um'
+      - 'diesen Rüstungsständer zu erschaffen'
+  gui_invis:
+    name: 'Sichtbarkeit ändern'
+    lore: []
+  gui_size:
+    name: 'Grösse ändern'
+    lore: []
+  gui_base:
+    name: 'Bodenplatte ändern'
+    lore: []
+  gui_grav:
+    name: 'Schwerkraft ändern'
+    lore: []
+  gui_arms:
+    name: 'Arme ändern'
+    lore: []
+  gui_name:
+    name: 'Name ändern'
+    lore: []
+  gui_slots:
+    name: 'Equipment-Sicherung ändern'
+    lore: []
+  gui_pHead:
+    name: 'Spielerkopf geben'
+    lore: []
+  gui_invul:
+    name: 'Unzerstörbarkeit ändern'
+    lore: []
+  gui_glow:
+    name: 'Leuchten ändern'
+    lore: []
+  gui_head:
+    name: 'Kopf bewegen'
+    lore:
+      - 'Ändere die Position des Kopfes'
+  gui_body:
+    name: 'Körper bewegen'
+    lore:
+      - 'Ändere die Position des Körpers'
+  gui_larm:
+    name: 'Linken Arm bewegen'
+    lore:
+      - 'Ändere die Position des linken Arms'
+  gui_rarm:
+    name: 'Rechten Arm bewegen'
+    lore:
+      - 'Ändere die Position des rechten Arms'
+  gui_lleg:
+    name: 'Linkes Bein bewegen'
+    lore:
+      - 'Ändere die Position des linken Beins'
+  gui_rleg:
+    name: 'Rechtes Bein bewegen'
+    lore:
+      - 'Ändere die Position des rechten Beins'
+  gui_moveX:
+    name: 'Bewegen X (Ost/West)'
+    lore:
+      - 'Linksklick: Nach Osten bewegen (+0.1 X)'
+      - 'Rechtsklick: Nach Westen bewegen (-0.1 X)'
+      - '(Deaktiviert Schwerkraft automatisch)
+  gui_moveY:
+    name: 'Bewegen Y (Hoch/Runter)'
+    lore:
+      - 'Linksklick: Nach Oben bewegen (+0.1 Y)'
+      - 'Rechtsklick: Nach Unten bewegen (-0.1 Y)'
+      - '(Deaktiviert Schwerkraft automatisch)
+  gui_moveZ:
+    name: 'Bewegen Z (Süden/Norden)'
+    lore:
+      - 'Linksklick: Nach Süden bewegen (+0.1 Z)'
+      - 'Rechtsklick: Nach Norden bewegen (-0.1 Z)'
+      - '(Deaktiviert Schwerkraft automatisch)
+  gui_advanced:
+    name: 'Zeige/Verstecke fortgeschrittene Tools'
+  gui_headX:
+    name: 'Kopf X'
+    lore:
+      - 'Ändere X Position von Kopf'
+  gui_headY:
+    name: 'Kopf Y'
+    lore:
+      - 'Ändere Y Position von Kopf'
+  gui_headZ:
+    name: 'Kopf Z'
+    lore:
+      - 'Ändere Z Position von Kopf'
+  gui_lArmX:
+    name: 'Linker Arm X'
+    lore:
+      - 'Ändere X Position vom linken Arm'
+  gui_lArmY:
+    name: 'Linker Arm Y'
+    lore:
+      - 'Ändere Y Position vom linken Arm'
+  gui_lArmZ:
+    name: 'Linker Arm Z'
+    lore:
+      - 'Ändere Z Position vom linken Arm'
+  gui_rArmX:
+    name: 'Rechter Arm X'
+    lore:
+      - 'Ändere X Position vom rechten Arm'
+  gui_rArmY:
+    name: 'Rechter Arm Y'
+    lore:
+      - 'Ändere Y Position vom rechten Arm'
+  gui_rArmZ:
+    name: 'Rechter Arm Z'
+    lore:
+      - 'Ändere Z Position vom rechten Arm'
+  gui_lLegX:
+    name: 'Linkes Bein X'
+    lore:
+      - 'Ändere X Position vom linken Bein'
+  gui_lLegY:
+    name: 'Linkes Bein Y'
+    lore:
+      - 'Ändere Y Position vom linken Bein'
+  gui_lLegZ:
+    name: 'Linkes Bein Z'
+    lore:
+      - 'Ändere Z Position vom linken Bein'
+  gui_rLegX:
+    name: 'Rechtes Bein X'
+    lore:
+      - 'Ändere X Position vom rechten Bein'
+  gui_rLegY:
+    name: 'Rechtes Bein Y'
+    lore:
+      - 'Ändere Y Position vom rechten Bein'
+  gui_rLegZ:
+    name: 'Rechtes Bein Z'
+    lore:
+      - 'Ändere Z Position vom rechten Bein'
+  gui_bodyX:
+    name: 'Körper X'
+    lore:
+      - 'Ändere X Position vom Körper'
+  gui_bodyY:
+    name: 'Körper Y'
+    lore:
+      - 'Ändere Y Position vom Körper'
+  gui_bodyZ:
+    name: 'Körper Z'
+    lore:
+      - 'Ändere Z Position vom Körper'
