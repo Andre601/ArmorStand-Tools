@@ -1,0 +1,349 @@
+# Armor Stand Tools
+# von St3venAU
+# St3venAU@gmail.com
+#
+# Übersetzung: Andre_601
+# https://andre601.ch
+#
+# Sprachkonfiguration
+#
+# Datei erstellt von: v${project.version}
+# (Wenn dies nicht die Version ist, welche du verwendest, solltest du eventuell diese Config löschen
+#  um sie neu zu generieren. Es könnte neue Config Optionen geben)
+#
+# Wenn du nach einer übersetzten Version schaust, siehe hier:
+# https://www.spigotmc.org/resources/armor-stand-tools.2237/
+#
+# Bearbeite diese Texte wenn du die formulierung oder die Sprache ändern willst,
+# welche in diesem Plugin verwendet wird.
+# 
+# WICHTIG: Bearbeite nur den Text, welcher zwischen den einzelnen
+# Anführungszeichen ist: 'So wie das hier'
+# Wenn du irgendwas ausserhalb der Anführungszeichen editierst,
+# können Fehler entstehen.
+# Wenn du ' in Nachrichten verwenden willst, musst du '' verwenden.
+#
+# Um die Originaldatei wieder zu erhalten, lösche diese und führe einen
+# Plugin Neustart aus.
+#
+####################
+# Hauptnachrichten #
+####################
+invReturned: 'Inventarinhalt zurückgegeben'
+asDropped: 'Rüstungsständer fallen gelassen'
+asVisible: 'Sichtbar'
+isTrue: 'Wahr'
+isFalse: 'Falsch'
+carrying: 'Trage Rüstungsständer. Klicke zum fallenlassen'
+generalNoPerm: 'Keine Berechtigung für dieses Tool und/oder diese Region'
+cbCreated: 'Befehlsblock erstellt'
+size: 'Grösse'
+small: 'Klein'
+normal: 'Normal'
+basePlate: 'Bodenplatte'
+isOn: 'An'
+isOff: 'Aus'
+gravity: 'Gravitation'
+arms: 'Arme'
+invul: 'Unzerstörbarkeit'
+equip: 'Ausrüstung'
+locked: 'Gesichert'
+unLocked: 'Ungesichert'
+currently: 'Aktuell'
+notConsole: 'Dieser Befehl kann nicht von der Konsole ausgeführt werden'
+giveMsg1: 'Rüstungsständer-Tools gegeben. Linksklicke ein tool um zwischen ihnen zu wechseln.'
+giveMsg2: 'Führe den Befehl erneut aus um dein altes Inventar zurück zu kriegen.'
+conReload: 'ArmorStand-Tools Konfiguration neu geladen'
+noRelPerm: 'Du hast keine Berechtigung das plugin neu zu laden'
+noAirError: 'Error: Konnte keinen nahegelegenen Luftblock finden. Bewege dich und versuch es erneut.'
+invalidName: 'ist kein gültiger Spielername'
+wgNoPerm: 'Keine Berechtigung um einen Rüstungsständer in dieser Region zu bearbeiten'
+noCommandPerm: 'Du hast keine Berechtigung um diesen Befehl zu verwenden'
+armorStand: 'Rüstungsständer'
+none: 'Keine'
+guiInUse: 'Diese Rüstungsständer-GUI ist bereits in verwendung'
+# New since v2.4.0:
+noASNearBy: 'Kein Rüstungsständer in der nähe'
+closestAS: 'Nähegelegenster Rüstungsständer'
+type: 'Typ'
+command: 'Befehl'
+# New since v3.2.0
+creativeRequired: 'Kreativmodus wird benötigt um einen Rüstungsständer als Befehlsblock zu speichern'
+# New since v3.3.0
+cmdOnCooldown: 'Dieser Befehl ist am abkühlen'
+cooldownRemovedFrom: 'Cooldown entfernt von'
+isAnInvalidCooldown: 'ist eine ungültige Cooldown zeit'
+cooldownSetTo: 'Cooldown geändert zu'
+ticksFor: 'ticks für'
+setCooldown: 'Setze den Cooldown für den Befehl'
+removeCooldown: 'Entferne den Cooldown für den Befehl'
+# New since v3.4.1
+glow: 'Leuchten'
+cmdNotAllowed: 'Dieser Befehl ist nicht erlaubt während du ArmorStand-Tools verwendest'
+#New since v4.0.0
+crouch: 'Schleichen'
+click: 'Klicken'
+finish: 'Beenden'
+#New since v4.3.0
+configuredArmorStand: 'Rüstungsständer eingestellt'
+inventoryFull: 'Inventar voll. Versuch es erneut'
+name: 'Name'
+inventory: 'Inventar'
+items: 'Items'
+stacks: 'Stacks'
+cmdsAssigned: 'Befehle hinzugefügt'
+invisible: 'Unsichtbar'
+invuln: 'Inzerstörbar'
+glowing: 'Leuchtend'
+attributes: 'Eigenschaften'
+hasTheseCmdsAssigned: 'hat diese Befehle'
+hasNoCmds: 'hat keine Befehle'
+priority: 'Priorität'
+delay: 'Verzögerung'
+errorExecutingCmd: 'Ein Fehler ist beim ausführen des Befehls aufgetreten'
+isNotValidNumber: 'ist keine gültige Zahl'
+removedFromAs: 'vom Rüstungsständer entfernt'
+listAssignedCmds: 'Zeige Befehle'
+addACmd: 'Einen Befehl hinzufügen'
+removeACmd: 'Einen Befehl entfernen'
+cmdHelp: 'Dieser Befehl wird verwendet um Befehle zum nahegelegensten Rüstungsständer (innerhalb von 4 Blöcken) hinzuzufügen/zu entfernen. Die Befehle werden ausgeführt, wenn ein Spieler rechtsklick auf den Rüstungsständer macht mit der niedrigsten Priorität zuerst.'
+
+#############################
+# Tool names & descriptions #
+#############################
+tool:
+  summon:
+    name: 'Rüstungsständer erschaffen'
+    lore:
+      - 'Rechtsklick um einen Rüstungsständer zu erschaffen'
+      - 'und aufzuheben.'
+      - 'Jeder weitere Klick lässt Ihn fallen.'
+  gui:
+    name: 'GUI Multi-Tool'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um ein GUI zum'
+      - 'einstellen seiner Atribute oder Ausrüstung zu öffnen.'
+  rotat:
+    name: 'Rotation'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um seine Rotation'
+      - 'zu ändern.'
+      - 'Der Wert hängt davon ab, welchen Bereich des Körpers'
+      - 'du anklickst.'
+  headX:
+    name: 'Kopf X'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um die X-Position'
+      - 'des Kopfes zu ändern.'
+      - 'Der Wert hängt davon ab, welchen Bereich des Körpers'
+      - 'du anklickst.'
+  headY:
+    name: 'Kopf Y'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um die Y-Position'
+      - 'des Kopfes zu ändern.'
+      - 'Der Wert hängt davon ab, welchen Bereich des Körpers'
+      - 'du anklickst.'
+  headZ:
+    name: 'Kopf Z'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um die Z-Position'
+      - 'des Kopfes zu ändern.'
+      - 'Der Wert hängt davon ab, welchen Bereich des Körpers'
+      - 'du anklickst.'
+  lArmX:
+    name: 'Linker Arm X'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um die X-Position'
+      - 'des linken Arms zu ändern.'
+      - 'Der Wert hängt davon ab, welchen Bereich des Körpers'
+      - 'du anklickst.'
+  lArmY:
+    name: 'Linker Arm Y'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um die Y-Position'
+      - 'des link Arms zu ändern.'
+      - 'Der Wert hängt davon ab, welchen Bereich des Körpers'
+      - 'du anklickst.'
+  lArmZ:
+    name: 'Linker Arm Z'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um die Z-Position'
+      - 'des linken Arms zu ändern.'
+      - 'Der Wert hängt davon ab, welchen Bereich des Körpers'
+      - 'du anklickst.'
+  rArmX:
+    name: 'Rechter Arm X'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um die X-Position'
+      - 'des rechten Arms zu ändern.'
+      - 'Der Wert hängt davon ab, welchen Bereich des Körpers'
+      - 'du anklickst.'
+  rArmY:
+    name: 'Rechter Arm Y'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um die Y-Position'
+      - 'des rechten Arms zu ändern.'
+      - 'Der Wert hängt davon ab, welchen Bereich des Körpers'
+      - 'du anklickst.'
+  rArmZ:
+    name: 'Rechter Arm Z'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um die Z-Position'
+      - 'des rechten Arms zu ändern.'
+      - 'Der Wert hängt davon ab, welchen Bereich des Körpers'
+      - 'du anklickst.'
+  moveX:
+    name: 'Bewegen X'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um ihn +0.1 auf'
+      - 'der X-Achse zu bewegen.'
+      - 'Schleiche und Rechtsklicke für -0.1'
+  moveY:
+    name: 'Bewegen Y'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um ihn +0.1 auf'
+      - 'der Y-Achse zu bewegen.'
+      - 'Schleiche und Rechtsklicke für -0.1'
+  moveZ:
+    name: 'Bewege Z'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um ihn +0.1 auf'
+      - 'der Z-Achse zu bewegen.'
+      - 'Schleiche und Rechtsklicke für -0.1'
+  lLegX:
+    name: 'Linkes Bein X'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um die X-Position'
+      - 'des linken Beins zu ändern.'
+      - 'Der Wert hängt davon ab, welchen Bereich des Körpers'
+      - 'du anklickst.'
+  lLegY:
+    name: 'Linkes Bein Y'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um die Y-Position'
+      - 'des linken Beins zu ändern.'
+      - 'Der Wert hängt davon ab, welchen Bereich des Körpers'
+      - 'du anklickst.'
+  lLegZ:
+    name: 'Linkes Bein Z'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um die Z-Position'
+      - 'des linken Beins zu ändern.'
+      - 'Der Wert hängt davon ab, welchen Bereich des Körpers'
+      - 'du anklickst.'
+  rLegX:
+    name: 'Rechtes Bein X'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um die X-Position'
+      - 'des rechten Beins zu ändern.'
+      - 'Der Wert hängt davon ab, welchen Bereich des Körpers'
+      - 'du anklickst.'
+  rLegY:
+    name: 'Rechtes Bein Y'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um die Y-Position'
+      - 'des rechten Beins zu ändern.'
+      - 'Der Wert hängt davon ab, welchen Bereich des Körpers'
+      - 'du anklickst.'
+  rLegZ:
+    name: 'Rechtes Bein Z'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um die Z-Position'
+      - 'des rechten Beins zu ändern.'
+      - 'Der Wert hängt davon ab, welchen Bereich des Körpers'
+      - 'du anklickst.'
+  bodyX:
+    name: 'Körper X'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um die X-Position'
+      - 'des Körpers zu ändern.'
+      - 'Der Wert hängt davon ab, welchen Bereich des Körpers'
+      - 'du anklickst.'
+  bodyY:
+    name: 'Körper Y'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um die Y-Position'
+      - 'des Körpers zu ändern.'
+      - 'Der Wert hängt davon ab, welchen Bereich des Körpers'
+      - 'du anklickst.'
+  bodyZ:
+    name: 'Körper Z'
+    lore:
+      - 'Rechtsklicke einen Rüstungsständer um die Z-Position'
+      - 'des Körpers zu ändern.'
+      - 'Der Wert hängt davon ab, welchen Bereich des Körpers'
+      - 'du anklickst.'
+  gui_move:
+    name: 'Aufheben (Bewegen)'
+    lore:
+      - 'Hebt den Rüstungsständer um ihn zu bewegen'
+  gui_clone:
+    name: 'Klonen'
+    lore:
+      - 'Klont den Rüstungsständer und hebt ihn auf'
+  gui_gen_cmd:
+    name: 'Erstelle einen Erschaffen-Befehl'
+    lore:
+      - 'Ein Behelsblock wird erstellt'
+      - 'Erschaffen-Befehl wird gespeichert'
+  gui_invis:
+    name: 'Sichtbarkeit ändern'
+    lore:
+  gui_size:
+    name: 'Grösse ändern'
+    lore:
+  gui_base:
+    name: 'Bodenplatte ändern'
+    lore:
+  gui_grav:
+    name: 'Gravitation ändern'
+    lore:
+  gui_arms:
+    name: 'Arme ändern'
+    lore:
+  gui_name:
+    name: 'Name ändern'
+    lore:
+  gui_slots:
+    name: 'Ausrüstungssicherung ändern'
+    lore:
+  gui_pHead:
+    name: 'Spielerkopf geben'
+    lore:
+  gui_invul:
+    name: 'Unzerstörbarkeit ändern'
+    lore:
+  gui_glow:
+    name: 'Leuchten ändern'
+    lore:
+  gui_head:
+    name: 'Kopf bewegen'
+    lore:
+      - 'Ändere die Position des Kopfes'
+  gui_body:
+    name: 'Körper bewegen'
+    lore:
+      - 'Ändere die Position des Körpers'
+  gui_larm:
+    name: 'Linken Arm bewegen'
+    lore:
+      - 'Ändere die Position des linken Arms'
+  gui_rarm:
+    name: 'Rechten Arm bewegen'
+    lore:
+      - 'Ändere die Position des rechten Arms'
+  gui_lleg:
+    name: 'Linkes Bein bewegen'
+    lore:
+      - 'Ändere die Position des linken Beins'
+  gui_rleg:
+    name: 'Rechtes Bein bewegen'
+    lore:
+      - 'Ändere die Position des linken Beins'
+  gui_item:
+    name: 'Als Item aufnehmen'
+    lore:
+      - 'Erstelle ein Rüstungsständer-Item für diesen Rüstungsständer'
+      - 'Kreativmodus: Rüstungsständer bleibt'
+      - 'Überlebensmodus: Rüstungsständer wird zersört'

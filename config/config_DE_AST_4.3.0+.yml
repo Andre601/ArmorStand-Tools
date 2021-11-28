@@ -1,0 +1,173 @@
+# Armor Stand Tools
+# von St3venAU
+# St3venAU@gmail.com
+#
+# Übersetzung: Andre_601
+# https://andre601.ch
+#
+# Hauptkonfiguration
+#
+# Datei erstellt von: v${project.version}
+# (Wenn dies nicht die Version ist, welche du verwendest, solltest du eventuell diese Config löschen
+#  um sie neu zu generieren. Es könnte neue Optionen geben)
+#
+# Funktionen:
+#   - Erschaffe Rüstungsständer
+#   - Benenne Rüstungsständer
+#   - Ändere: Gravitation, Sichtbarkeit, Arme, Bodenplatte, Grösse, Unzerstörbarkeit, Equipment-Sicherung
+#   - Manipuliere die Position von Kopf, Körper, Arme und Beine
+#   - Volle Kontrolle über das Inventar eines Rüstungsständers (Rüstung & Items in den Händen)
+#   - Klone Rüstungsständer
+#   - Befehlsblock-Tool: Erstellt einen Befehlsblock mit dem Befehl, welchern diese Rüstungsständer in seinem aktuellem Zustand erschafft
+#   - Spielerkopf-Tool: Ändert den Kopf eines Rüstungsständers zu dem eines Spielers.
+#   - WorldGuard Regionen unterstützung
+#   - Benutzerdefinierte Übersetzungen
+#
+# Befehle:
+#   /astools
+#         Gib dir selbst alle Rüstungsständer-Tools (Hinweis: Leert dein Inventar)
+#   /asttools reload
+#         Laded die Konfigurationsdatei von ArmorStand-Tools neu
+#   /ast
+#         Alias von /astools
+#
+#   /ascmd add <Priorität> <Verzögerung> <player/console/bungee> <Befehl/BungeeCord Server name>
+#         Fügt einen Befehl zum nächsten Rüstungsständer hinzu. Siehe den "Befehle zu Rüstungsständer hinzufügen" Bereich unten.
+#   /ascmd remove <Befehlsnummer>
+#         Entfernt einen Befehl vom nahegelegensten Rüstungsständer
+#   /ascmd list
+#         Zeigt alle Befehle die ein Rüstungsständer hat
+#   /ascmd cooldown <Ticks>
+#         Setzt einen Cooldown für den nahegelegensten Rüstungsständer (Überschreibt die Standardeinstellung in der config.yml)
+#   /ascmd cooldown remove
+#         Entfernt den Cooldown für den nahegelegensten Rüstungsständer (Standardeinstellung von der config.yml wird wieder verwendet)
+#
+#   Hinweis: Rüstungsständer-Befehle können einen %player% Platzhalter beinhalten, welcher durch den namen des ausführenden Spielers ersetzt wird.
+#
+# Berechtigungen:
+#   astools.command              Berechtigung für den /astools Befehl
+#   astools.reload               Berechtigung um das Plugin mit /astools reload neu zu laden
+#   astools.use                  Berechtigung um alle Tools (Mit ausnahmen dieser, welche eigene Berechtigungen haben. Siehe unten) zu verwenden
+#   astools.clone                Berechtigung um das Klonen-Tool zu verwenden (Klont den Rüstungsständer ohne die nötigen Materialien zu haben)
+#   astools.summon               Berechtigung um das Erschaffen-Tool zu verwenden (Erschafft einen Rüstungsständer ohne die nötigen Materialien zu haben)
+#   astools.head                 Berechtigung um das Spielerkopf-Tool zu verwenden (Möglichkeit einen Spielerkopf für den Rüstungsständer zu bestimmen)
+#   astools.cmdblock             Berechtigung um das Speichern-Tool zu verwenden (Erstellt einen Befehlsblock welcher den Rüstungsständer erschafft)
+#   astools.glow                 Berechtigung um das Leucht-Tool zu verwenden (Lässt den Rüstungsständer leuchten)
+#   astools.ascmd.add.console    Berechtigung um einen Konsolenbefehl hinzuzufügen (Früher astools.ascmd.assign.console)
+#   astools.ascmd.add.player     Berechtigung um einen Spielerbefehl hinzuzufügen (Früher astools.ascmd.assign.player)
+#   astools.ascmd.add.bungee     Berechtigung um einen BungeeCord-Befehl hinzuzufügen (Siehe unten für details)
+#   astools.ascmd.remove         Berechtigung um einen Befehl zu entfernen
+#   astools.ascmd.list           Berechtigung um alle Befehle anzuzeigen, die ein Rüstungsständer hat
+#   astools.ascmd.cooldown       Berechtigung um einen Cooldown hinzuzufügen/zu entfernen
+#   astools.ascmd.execute        Berechtigung um Befehle, die ein Rüstungsständer hat auszuführen (Bei Rechtsklick)
+#   astools.bypass-wg-flag       Berechtigung um AST's benutzerdefinierte WorldGuard-Flag zu umgehen (Siehe unten für details)
+#
+# Befehle zu Rüstungsständer hinzufügen:
+#   - Stehe in der nähe des Rüstungsständers (Der nahegelegenste in einem 4 Blöcke Radius wird ausgewählt) und verwende den Befehl:
+#     /ascmd add <Priorität> <Verzögerung> <player/console/bungee> <Befehl/BungeeCord Server name>
+#     - <Priorität>:                     Wenn mehrere Befehle vorhanden sind werden Befehle mit einer tieferen Priorität zuerst ausgeführt.
+#                                        Befehle mit der selben Priorität werden in zufälliger Reihenfolge ausgeführt.
+#     - <Verzögerung>:                   Verzögerung in Ticks bevor der Befehl ausgeführt wird.
+#     - <player/console/bungee>:         Spielerbefehle werden ausgeführt als währen sie vom Spieler geschrieben worden-
+#                                        Konsolenbefehle werden von der Serverkonsole ausgeführt.
+#                                        BungeeCord Befehle sind speziell (Siehe unten).
+#     - <Befehl/BungeeCord Server name>: Der Befehl welcher ausgeführt werden soll. Um den namen des ausführenden Spielers im Befehl zu verwenden,
+#                                        benutze den %player% Platzhalter. Er wird beim ausführen durch den Spielernamen ersetzt.
+#   - Wenn ein Spieler mit der astools.ascmd.execute Berechtigung einen Rüstungsständer rechtsklickt werden alle Befehle die der Rüstungsständer hat
+#     ausgeführt.
+#   - Warnung: Sei vorsichtig wenn du Konsolenbefehle hinzufügst. Jeder Spieler mit der astools.ascmd.execute Berechtigung würde fähig sein,
+#              Konsolenbefehle auszuführen.
+#   - Standardmässig würden alle Befehle die ein Rüstungsständer hat den Standartcooldown von der config.yml verwenden. Dies kann individuell mit dem
+#     /ascmd coodldown <Ticks> Befehl geändert werden.
+#   - BungeeCord Befehle: Werden verwendet um einen Spieler auf einen anderen Server zu senden. z.B. würde folgender Befehl einen BungeeCord-Befehl
+#                         hinzufügen, welcher den Spieler zu server1 sendet: /ascmd add 0 0 bungee server1
+#
+# WorldGuard Integration:
+#   - Wenn ein Spieler nicht die Bauberechtigung für die Region hat, wird diesem auch die verwendung von AST in dieser Region verweigert.
+#   - Zusätzich gibt es eine eigene Flag namens 'ast' welche standardmässig auf 'Erlauben' gesetzt ist. Dies kann zu 'Verweigern' geändert werden,
+#     wenn du möchtest das Spieler Baurechte haben, jedoch nicht rechte zum verwenden von AST haben sollen.
+#   - Die 'ast' Flag wird ignoriert, wenn der Spieler die 'astools.bypass-wg-flag' Berechtigung hat. Dies bedeutet, dass Spieler mit dieser
+#     Berechtigung AST in WorldGuard Regionen verwenden können, selbst wenn diese die 'ast' flag auf 'Verweigern' gesetzt haben.
+#   - Die 'ast' flag wird auch bei Spielern ignoriert, welche OP haben.
+#
+
+# Generelle Konfiguration
+integrateWithWorldGuard: true
+allowMovingStandsBetweenWorlds: false
+deactivateToolsOnWorldChange: true
+requireCreativeForSaveAsCmdBlock: false
+crouchRightClickOpensGUI: false
+defaultASCmdCooldownTicks: 0
+bypassWorldguardForASCmdExecution: false
+saveToolCreatesCommandBlock: true
+logGeneratedSummonCommands: false
+showDebugMessages: false
+
+# Unkommentiere die untere Option wenn du Spielern den zugang zu bestimmten Befehlen verweigern willst.
+# Füge so viele Befehle hinzu wie du willst. Nur das erste Wort eines Befehls ist benötigt, alles andere nach der ersten Lücke wird ignoriert.
+
+#deniedCommandsWhileUsingTools
+#  - sell
+
+# Dies sind die Standards wenn du einen neuen Rüstungsständer mit dem /astools (oder /ast) Erschaffen-tool erschaffs.
+helmet: AIR
+chest: AIR
+pants: AIR
+boots: AIR
+inHand: AIR
+inOffHand: AIR
+isVisible: true
+isSmall: false
+hasArms: true
+hasBasePlate: false
+hasGravity: false
+name: ''
+invulnerable: false
+equipmentLock: false
+
+# Aktiviere/Deaktiviere Tools
+enableTool:
+  headX: true
+  headY: true
+  headZ: true
+  lArmX: true
+  lArmY: true
+  lArmZ: true
+  rArmX: true
+  rArmY: true
+  rArmZ: true
+  moveX: true
+  moveY: true
+  moveZ: true
+  lLegX: true
+  lLegY: true
+  lLegZ: true
+  rLegX: true
+  rLegY: true
+  rLegZ: true
+  bodyX: true
+  bodyY: true
+  bodyZ: true
+  summon: true
+  gui: true
+  rotat: true
+  gui_clone: true
+  gui_gen_cmd: true
+  gui_invis: true
+  gui_size: true
+  gui_base: true
+  gui_grav: true
+  gui_arms: true
+  gui_name: true
+  gui_slots: true
+  gui_pHead: true
+  gui_invul: true
+  gui_move: true
+  gui_glow: true
+  gui_head: true
+  gui_body: true
+  gui_larm: true
+  gui_rarm: true
+  gui_lleg: true
+  gui_rleg: true
+  gui_item: true

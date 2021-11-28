@@ -1,5 +1,8 @@
 [plugin]: https://www.spigotmc.org/resources/2237/
 
+[config_4.3.0+]: https://github.com/Andre601/ArmorStand-Tools/blob/master/config/config_DE_AST_4.3.0+.yml
+[language_4.3.0+]: https://github.com/Andre601/ArmorStand-Tools/blob/master/language/language_DE_AST_4.3.0+.yml
+
 [config_4.0.0+]: https://github.com/Andre601/ArmorStand-Tools/blob/master/config/config_DE_AST_4.0.0+.yml
 [language_4.0.0+]: https://github.com/Andre601/ArmorStand-Tools/blob/master/language/language_DE_AST_4.0.0+.yml
 
@@ -19,6 +22,7 @@ Abhängig von der AST Version musst du eine andere Datei verwenden:
 
 | AST Version            | `config.yml`                                      | `language.yml`                                        |
 | ---------------------- | ------------------------------------------------- | ----------------------------------------------------- |
+| 4.3.0+                 | [`config_DE_AST_4.3.0+.yml`][config_4.3.0+]       | [`language_DE_AST_4.3.0+.yml`][language_4.3.0+]       |
 | 4.0.0+                 | [`config_DE_AST_4.0.0+.yml`][config_4.0.0+]       | [`language_DE_AST_4.0.0+.yml`][language_4.0.0+]       |
 | 3.5.0 bis 3.7.2        | [`config_DE_AST_3.5.0+.yml`][config_3.5.0+]       | [`language_DE_AST_3.5.0+.yml`][language_3.5.0+]       |
 | Versionen bis zu 3.4.3 | [`config_DE_AST_Pre-3.5.0.yml`][config_pre_3.5.0] | [`language_DE_AST_Pre-3.5.0.yml`][language_pre_3.5.0] |
